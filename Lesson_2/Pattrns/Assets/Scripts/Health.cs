@@ -1,28 +1,19 @@
 ﻿namespace Asteroids
 {
-    internal sealed class Health : IHealth
+    public sealed class Health
     {
-        private readonly int _maxHp;
-
-        public int MAXHp => _maxHp;
-        public float CurrentHp { get; private set; }
-
-        public Health(int maxHp)
+        public float Max { get; }
+        public float Current { get; private set; }
+        
+        public Health(float max, float current)
         {
-            _maxHp = maxHp;
-            CurrentHp = _maxHp;
+            Max = max;
+            Current = current;
         }
 
-        public void ApplyDamage(float value)
+        public void ChangeCurrentHealth(float hp)
         {
-            CurrentHp -= value;
+            Current = hp;
         }
-    }
-
-    internal interface IHealth
-    { 
-        int MAXHp { get; }
-       float CurrentHp { get; }
-       void ApplyDamage(float value);
     }
 }
