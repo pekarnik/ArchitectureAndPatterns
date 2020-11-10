@@ -18,7 +18,7 @@ namespace Assets.Scripts
 		{
 			var temAmmunition = Object.Instantiate(_bullet, _barrel.position, _barrel.rotation);
 			temAmmunition.AddForce(_barrel.up * _force);
-			Object.Destroy(temAmmunition, 3);
+			Object.Destroy(temAmmunition.gameObject, 3);
 		}
 	}
 }
