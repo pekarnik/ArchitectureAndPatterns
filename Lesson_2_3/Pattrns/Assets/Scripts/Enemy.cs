@@ -38,6 +38,12 @@ namespace Asteroids
 			enemy.Health = hp;
 			return enemy;
 		}
+		public static WarShip CreateWarshipEnemy(Health hp)
+		{
+			var enemy = Instantiate(Resources.Load<WarShip>("Enemy/Asteroid"));
+			enemy.Health = hp;
+			return enemy;
+		}
 		public void ActiveEnemy(Vector3 position, Quaternion rotation)
 		{
 			transform.localPosition = position;
