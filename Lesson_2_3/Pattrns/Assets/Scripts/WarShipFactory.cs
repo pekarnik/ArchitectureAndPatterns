@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 namespace Asteroids
 {
-	internal sealed class AsteroidFactory : IEnemyFactory
+	internal sealed class WarShipFactory : IEnemyFactory
 	{
 		public Enemy Create(Health hp)
 		{
 			var enemy =
-				Object.Instantiate(Resources.Load<Asteroid>("Enemy/Asteroid"));
+				Object.Instantiate(Resources.Load<WarShip>("Enemy/Asteroid"));
 
 			return enemy;
 		}
